@@ -5,7 +5,8 @@
 // String name = "Niraj";
 // String name2 = "Niraj";
 
-// System.out.printf("Length = %s \n", name.length());
+// System.out.printf("Length = %s \n", name.length()); // length is a method for
+// string but a getter for array (why java? why?)
 // System.out.printf("StartsWith = %s \n", name.startsWith("N"));
 // System.out.printf("EndsWith = %s \n", name.endsWith("j"));
 // System.out.printf("Index of = %s \n", name.indexOf("j"));
