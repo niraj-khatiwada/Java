@@ -30,5 +30,8 @@
 // System.out.printf("%s\n", orName);
 // System.out.printf("%s\n", newDate);
 
+// constant
+// final float pi = 3.14F;
+
 // }
 // }
