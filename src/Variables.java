@@ -1,4 +1,4 @@
-public class Main {
+public class Variables {
     public static void main(String[] args) {
         System.out.printf("Hello %s\n", 100);
 
