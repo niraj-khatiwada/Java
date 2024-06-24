@@ -1,6 +1,6 @@
 import java.util.ArrayDeque;
 
-class Main {
+class Queue {
     public static void main(String[] args) {
         // ArrayDeque = Array Double Ended Queue. We can add items from front or back.
         var queue = new ArrayDeque<Integer>();
