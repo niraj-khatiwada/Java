@@ -1,8 +1,10 @@
+import java.util.*;
 
 class Main {
+
     public static void main(String[] args) {
-        var sort = new Sorting();
-        sort.sort();
+        var heap = new Heap();
+        heap.main();
     }
 
 }
