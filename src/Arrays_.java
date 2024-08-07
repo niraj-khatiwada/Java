@@ -35,5 +35,32 @@ class Arrays_ {
         int[][] list2DInitialized = { { 1, 2 }, { 2 }, { 3 } };
         System.out.println(list2DInitialized);
 
+        // Sorting
+        int[][] rs = new int[2][2];
+        rs[0] = new int[] { 1, 2 };
+        rs[1] = new int[] { 1, 3 };
+
+        Arrays.sort(rs, (a, b) -> calculateDistance(a) - calculateDistance(b)); // ASC -> a - b // DESC -> b - a
+        for (var p : rs) {
+            System.out.println(Arrays.toString(p));
+        }
+
+        var array = new String[3];
+        array[1] = "Suraj";
+        array[0] = "Niraj";
+        array[2] = "airaj";
+
+        // ASC
+        Arrays.sort(array, (a, b) -> (a.toUpperCase()).compareTo(b.toUpperCase()));
+
+        // DESC
+        // Arrays.sort(array, (a, b) -> (b.toUpperCase()).compareTo(a.toUpperCase()));
+
+        System.out.println(Arrays.toString(array));
+
+    }
+
+    private static int calculateDistance(int[] point) {
+        return point[0] * point[0] + point[1] * point[1];
     }
 }
