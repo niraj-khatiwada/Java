@@ -40,7 +40,8 @@ class Arrays_ {
         rs[0] = new int[] { 1, 2 };
         rs[1] = new int[] { 1, 3 };
 
-        Arrays.sort(rs, (a, b) -> calculateDistance(a) - calculateDistance(b)); // ASC -> a - b // DESC -> b - a
+        Arrays.sort(rs, (a, b) -> Double.compare(calculateDistance(a), calculateDistance(b))); // ASC -> a - b // DESC
+                                                                                               // -> b - a
         for (var p : rs) {
             System.out.println(Arrays.toString(p));
         }
@@ -60,7 +61,7 @@ class Arrays_ {
 
     }
 
-    private static int calculateDistance(int[] point) {
+    private static double calculateDistance(int[] point) {
         return point[0] * point[0] + point[1] * point[1];
     }
 }
