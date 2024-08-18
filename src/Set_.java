@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-class Main {
+class Set {
 
     public static void main(String[] args) {
         // We can use TreeSet to compare arrays in Set
@@ -11,6 +11,8 @@ class Main {
         set.add(new int[] { 1, 2 });
 
         System.out.println(set.size());
+
+        System.out.println(set.contains(new int[] { 1, 2 }));
 
         // If we want to use reference types like Node in Set, better to use HashMap for
         // that.
