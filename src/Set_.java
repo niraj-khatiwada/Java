@@ -18,13 +18,11 @@ class Set {
 
         System.out.println(set.contains(new int[] { 1, 2 }));
 
-        // If we want to use reference types like Node in Set, better to use HashMap for
-        // that.
-        var hashSet = new HashSet<ArrayList<Integer>>();
-
         // We can use the HashSet for List comparison.
         // The List collection properly implements the equals() and hashCode() so we can
         // use HashSet for Lists
+        var hashSet = new HashSet<ArrayList<Integer>>();
+
         var l1 = new ArrayList<Integer>();
         l1.add(1);
         l1.add(2);
