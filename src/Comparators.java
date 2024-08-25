@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Comparator;
 
 public class Comparators {
 
@@ -44,6 +43,25 @@ public class Comparators {
             System.out.printf(" %s ", node.value);
         }
         System.out.println();
+    }
+
+    public void doubleSorting() {
+        // Sort by 1st value first and then sort by difference
+        // This is not same as sort by 1st value first and then again apply another sort
+        // based on difference to the previous sort (See example below)
+        // This will do batch sorting
+        int[][] nums = new int[][] { { 1, 4 }, { 4, 4 }, { 2, 2 }, { 3, 4 }, { 1, 1 } };
+        Comparator<int[]> c1 = Comparator.comparingInt(x -> x[0]);
+        Comparator<int[]> c2 = Comparator.comparingInt(x -> x[1] - x[0]);
+        Arrays.sort(nums, c1.thenComparing(c2));
+        print(nums);
+
+        // THIS IS NOT SAME AS ABOVE
+        // Arrays.sort(nums, Comparator.comparingInt(x -> x[0]));
+        // ⬆️ This will sort by 1st value
+        // Arrays.sort(nums, Comparator.comparingInt(x -> x[1]-x[1]));
+        // ⬆️ And again will sort and rearranges by difference
+
     }
 
     private void print(int[][] grid) {
