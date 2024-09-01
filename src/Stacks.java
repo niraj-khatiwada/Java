@@ -21,6 +21,17 @@ public class Stacks {
             reversed.append(stack.pop());
         }
         System.out.println(reversed);
+
+        // Getting the values of stack in same order as stack
+        var order = new Stack<Integer>();
+        order.add(1);
+        order.add(3);
+        order.add(2);
+
+        // We need to loop in reverse to get the exact order
+        for (var i = order.size() - 1; i >= 0; i--) {
+            System.out.println(order.get(i)); // We can get values via index for stack. Does not work for queue though.
+        }
     }
 
 }
