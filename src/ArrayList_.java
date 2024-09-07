@@ -16,6 +16,10 @@ class ArrayList_ {
         System.out.println(arrayList.indexOf(1));
         System.out.println(arrayList.contains(1));
 
+        // Be careful while removing the value from array list
+        arrayList.remove(0); // Remove by index
+        arrayList.remove(Integer.valueOf(0)); // Remove by value.
+
         // Only works for Arrays
         int[] array = new int[] { 1, 2, 3 };
         System.out.println(Arrays.toString(Arrays.copyOf(array, 1)));
