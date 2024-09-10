@@ -2,22 +2,25 @@
 import java.util.*;
 
 class Main {
+    public static class Node {
+        public int value;
+
+        public Node(int value) {
+            this.value = value;
+        }
+    }
 
     public static void main(String[] args) {
-        var queue = new ArrayDeque<Integer>();
-        queue.add(1);
-        queue.add(3);
-        queue.add(2);
+        Main.works();
 
-        for (var item : queue) {
-            System.out.println(item); // We cannot get values via index for queue. Works for stack though.
-        }
+    }
 
-
-        var s = new StringBuilder();
-        s.delete(0, s.length())
-
-
+    public void works() {
+        var set = new HashSet<Node>();
+        var node1 = new Node(1);
+        var node2 = new Node(2);
+        set.add(node1);
+        set.add(node2);
     }
 
 }

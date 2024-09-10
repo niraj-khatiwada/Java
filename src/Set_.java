@@ -4,6 +4,7 @@ import java.util.*;
 class Set {
 
     public static void main(String[] args) {
+
         // TREESET vs HASHSET for Array and Collections
 
         // We need to use TreeSet for Array comparison.
@@ -37,6 +38,18 @@ class Set {
 
         var list = new ArrayList<ArrayList<Integer>>();
         list.addAll(hashSet);
+
+        // HashSet for object comparision.
+        // Objects like Node class, Person class, etc can be easily identified in a
+        // hashet, no extra work is required
+
+        // var set = new HashSet<Node>();
+        // var node1 = new Node(1);
+        // set.add(node1);
+        // set.add(new Node(2));
+        // set.contains(node1); // true
+        // set.contains(new Node(2));// false; since you're referencing a new node not
+        // the original node
 
     }
 
