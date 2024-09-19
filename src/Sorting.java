@@ -37,5 +37,10 @@ public class Sorting {
         Arrays.sort(array);
         System.out.printf("Array Sorted %s \n", Arrays.toString(array));
 
+        // Sorting a sub-array
+        var fullArray = new int[] { 5, 3, 2, 1, 6, 0 };
+        Arrays.sort(fullArray, 0, 4); // Only sort starting from 0 to 3rd
+        System.out.println(Arrays.toString(fullArray));
+
     }
 }
