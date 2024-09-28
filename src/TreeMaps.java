@@ -5,9 +5,11 @@ public class TreeMaps {
     public void main() {
         // Integer as Key
         var map = new TreeMap<Integer, String>();
+        // get(), put() and remove() all run in O(log(n))
         map.put(20, "Twenty");
         map.put(10, "Ten");
         map.put(30, "Thirty");
+        map.put(40, "Forty");
 
         // First and last entry
         System.out.println("First= " + map.firstEntry());
@@ -28,6 +30,10 @@ public class TreeMaps {
         // i.e. 20 will be included. If you want to exclude 20, just pass 21.
         var viewgt20 = map.tailMap(20); // This will not return copy but window of view of the same tree map
         System.out.println(viewgt20);
+
+        // Get entries between 20 and 30
+        // Just like substring(), the upper bound is exclusive for subMap as well
+        System.out.println(map.subMap(20, 30));
 
         // String as Key
         var map2 = new TreeMap<String, Integer>();
