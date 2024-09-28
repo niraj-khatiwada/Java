@@ -15,7 +15,11 @@ public class TreeMaps {
         System.out.println("First= " + map.firstEntry());
         System.out.println("Last= " + map.lastEntry());
 
-        // Floor and ceiling entry
+        // Lower and higher entry. These are exclusive to key provided
+        System.out.println(map.lowerEntry(20));
+        System.out.println(map.higherEntry(30));
+
+        // Floor and ceiling entry. These are inclusive to key provided
         System.out.println("Floor= " + map.floorEntry(20));
         System.out.println("Ceil= " + map.ceilingEntry(25));
 
