@@ -11,6 +11,8 @@ class Main {
         map.put(30, "Thirty");
         map.put(40, "Forty");
 
+        System.out.println(map.higherKey(21));
+
     }
 
 }

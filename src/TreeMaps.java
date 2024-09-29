@@ -17,11 +17,11 @@ public class TreeMaps {
 
         // Lower and higher entry. These are exclusive to key provided
         System.out.println(map.lowerEntry(20));
-        System.out.println(map.higherEntry(30));
+        System.out.println(map.higherEntry(30)); // Equivalent to Upper Bound in BS
 
         // Floor and ceiling entry. These are inclusive to key provided
         System.out.println("Floor= " + map.floorEntry(20));
-        System.out.println("Ceil= " + map.ceilingEntry(25));
+        System.out.println("Ceil= " + map.ceilingEntry(25)); // Equivalent to Lower Bound in BS
 
         // Get entries less than 20
         // HeadMap are exclusive. They will not include the entry of key(toKey) provided

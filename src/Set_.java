@@ -5,7 +5,10 @@ class Set {
 
     public static void main(String[] args) {
 
-        // TREESET vs HASHSET for Array and Collections
+        // TreeSet vs LinkedHashSet vs HashSet for Array and Collections
+        // HashSet: Does not maintain order
+        // LinkedHashSet: Maintains order
+        // TreeSet: Is always sorted based on element
 
         // We need to use TreeSet for Array comparison.
         // The Array does not implement .equals() and .hashCode() method properly so
@@ -50,6 +53,20 @@ class Set {
         // set.contains(node1); // true
         // set.contains(new Node(2));// false; since you're referencing a new node not
         // the original node
+
+        // Linked Hash Set
+        var linkedHashSet = new LinkedHashSet<Integer>();
+        linkedHashSet.add(2);
+        linkedHashSet.add(3);
+        linkedHashSet.add(1);
+        System.out.println(linkedHashSet); // Will always come out in order 2, 3, 1
+
+        // Tree Set
+        var treeSet = new TreeSet<Integer>();
+        treeSet.add(2);
+        treeSet.add(3);
+        treeSet.add(1);
+        System.out.println(linkedHashSet); // Will always be sorted 1, 2, 3
 
     }
 
