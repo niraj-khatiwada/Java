@@ -53,5 +53,19 @@ public class TreeMaps {
         mapReverse.put(3, "Three");
         mapReverse.put(2, "Two");
         System.out.println(mapReverse);
+
+        // Custom Comparator
+        // Sort based on length of key
+        Comparator<String> comparator = Comparator.comparingInt(String::length)
+                .thenComparing(String::compareTo); // Fallback to lexicographical sorting if the length are equal. If
+                                                   // you do not do this, the strings with same length will be ignored
+                                                   // after you add one.
+        var customMap = new TreeMap<String, Integer>(comparator);
+        customMap.put("code", 1);
+        customMap.put("for", 2);
+        customMap.put("real", 2);
+        customMap.put("hahah", 2);
+        System.out.println(customMap);
+
     }
 }
